@@ -7,7 +7,8 @@ public class Menu {
     AutoWaschAnlage autoWaschAnlage = new AutoWaschAnlage();
     boolean status = true;
 
-        Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
+
     public void startMenuAnzeigen() {
 
         while (status) {
@@ -26,7 +27,7 @@ public class Menu {
                 int oldSize = autoWaschAnlage.getFahrzeuge().size();
                 System.out.println("Geben sie das Kennzeichen des neuen Autos ein:");
                 String kennzeichen = scanner.next();
-                System.out.println("Geben sie Art des Fahrzeugs ein: lkw, pkw oder motorrad.");
+                System.out.println("Geben sie Art des Fahrzeugs ein: Lkw, Pkw oder Motorrad.");
                 String description = scanner.next();
                 autoWaschAnlage.newCarComesToWash(description, kennzeichen);
                 int newSize = autoWaschAnlage.getFahrzeuge().size();
@@ -47,6 +48,7 @@ public class Menu {
             } else if (autoWaschAnlage.getFahrzeuge().size() > 0 && eingabe.equals("4")) {
                 autoWaschAnlage.carWashed();
                 System.out.println("Auto wurde gewaschen und verlässt die Autowaschanlage.");
+                autoWaschAnlage.schlangeInfo();
             } else if (autoWaschAnlage.getFahrzeuge().size() > 1 && eingabe.equals("3")) {
                 fahrzeugLeavesBeforeWash();
             } else {
@@ -68,21 +70,22 @@ public class Menu {
     public void printExpressions() {
 
     }
-    public void fahrzeugLeavesBeforeWash(){
+
+    public void fahrzeugLeavesBeforeWash() {
+        int oldSize = autoWaschAnlage.getFahrzeuge().size();
+
         autoWaschAnlage.schlangeInfo();
         System.out.println("Gebe die Nummer des Fahrzeuges ein, das die Schlange verlassen soll: ");
         int eingabeNummerDesFahrzeugs = scanner.nextInt();
         int umrechnungInIndex = eingabeNummerDesFahrzeugs - 1;
 
-        try {
-            autoWaschAnlage.carLeavesBeforeWash(0);
-        } catch (IllegalArgumentException ex) {
-            ex.getMessage();
-            //autoWaschAnlage.schlangeInfo();
-        }
-        if(umrechnungInIndex != 0){
         autoWaschAnlage.carLeavesBeforeWash(umrechnungInIndex);
-        System.out.println("Das Fahrzeug Nummer " + eingabeNummerDesFahrzeugs + " hat die Schlange verlassen.");
-        autoWaschAnlage.schlangeInfo();}
+        int newSize = autoWaschAnlage.getFahrzeuge().size();
+
+        if (oldSize > newSize) {
+            System.out.println("Das Fahrzeug Nummer " + eingabeNummerDesFahrzeugs + " hat die Schlange verlassen.");
+        }
+            autoWaschAnlage.schlangeInfo();
     }
+
 }

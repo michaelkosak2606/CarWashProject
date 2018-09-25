@@ -4,7 +4,7 @@ import helpers.*;
 import main.AutoWaschAnlage;
 
 
-public class HelperFunctions {
+public class HelperFunctionsForTestsOnly {
     private LimitedArrayList<Fahrzeug> fahrzeugs = new LimitedArrayList<>();
     private Mathematics mathematics = new Mathematics();
     public AutoWaschAnlage autoWaschAnlage =new AutoWaschAnlage();

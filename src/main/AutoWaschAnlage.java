@@ -7,7 +7,7 @@ public class AutoWaschAnlage {
 
     private int guthaben;
 
-    private LimitedArrayList<Fahrzeug> fahrzeuge = new LimitedArrayList<>();
+    private static LimitedArrayList<Fahrzeug> fahrzeuge = new LimitedArrayList<>();
 
     private Mathematics mathematics = new Mathematics();
 
@@ -20,12 +20,21 @@ public class AutoWaschAnlage {
         return fahrzeuge;
     }
 
+    public static int numberOfCarToLeaveWash(int carNumber) {
+        if (carNumber == 0)
+            throw new IllegalArgumentException();
+        if (carNumber >= fahrzeuge.size())
+            throw new IllegalArgumentException();
+        return carNumber;
+    }
+
     public LimitedArrayList<Fahrzeug> carLeavesBeforeWash(int carNumberInSchlange) {
 
-        if (carNumberInSchlange == 0)
-            throw new IllegalArgumentException("Das Fahrzeug in der Wäsche darf die Schlange nicht mehr verlassen.");
-        if (carNumberInSchlange < fahrzeuge.size()) {
+        try {
+            numberOfCarToLeaveWash(carNumberInSchlange);
             fahrzeuge.remove(carNumberInSchlange);
+        } catch (IllegalArgumentException ex) {
+            System.out.println("Dieses Fahrzeug kann die Schlange nicht vorzeitig verlassen.");
         }
         return fahrzeuge;
     }
