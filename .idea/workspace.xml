@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="818ca853-084a-49e3-8dce-64c159959b69" name="Default Changelist" comment="" />
+    <list default="true" id="818ca853-084a-49e3-8dce-64c159959b69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_TestNG_Release.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/tests/AutoWaschAnlageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/tests/MathematicsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/utils/HelperFunctions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carwash.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/carz/Fahrzeug.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/carz/Lkw.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/carz/Motorrad.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/carz/Pkw.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/helpers/CarFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/helpers/LimitedArrayList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/helpers/Mathematics.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/main/AutoWaschAnlage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/main/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/carwash/main/Menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/carwash/tests/AutoWaschAnlageTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/carwash/tests/MathematicsTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/carwash/utils/HelperFunctions.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/carz/Fahrzeug.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/carz/Lkw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/carz/Motorrad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/carz/Pkw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/CarFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/LimitedArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/Mathematics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/AutoWaschAnlage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Menu.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,6 +186,9 @@
       <dir>$PROJECT_DIR$/Test/utils</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
@@ -202,6 +239,7 @@
     <option name="width" value="1680" />
     <option name="height" value="948" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -218,29 +256,6 @@
             <path>
               <item name="carwash" type="b2602c69:ProjectViewProjectNode" />
               <item name="carwash" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carwash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carwash" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="carz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carwash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carwash" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carwash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carwash" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carwash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carwash" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -248,12 +263,6 @@
               <item name="carwash" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="carwash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="carwash" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -269,7 +278,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537861275512" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537863342144" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -408,7 +417,7 @@
       <workItem from="1537254432954" duration="1618000" />
       <workItem from="1537258003500" duration="3864000" />
       <workItem from="1537267655249" duration="1293000" />
-      <workItem from="1537432600894" duration="52778000" />
+      <workItem from="1537432600894" duration="52902000" />
     </task>
     <servers />
   </component>
@@ -445,7 +454,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74893000" />
+    <option name="totallyTimeSpent" value="75017000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -458,9 +467,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918434" visible="true" weight="0.16666667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918434" visible="true" weight="0.16666667" />
       <window_info id="Structure" order="1" sideWeight="0.5008157" side_tool="true" weight="0.16666667" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -469,7 +477,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23928945" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23928945" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34273773" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -477,7 +485,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3291536" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
