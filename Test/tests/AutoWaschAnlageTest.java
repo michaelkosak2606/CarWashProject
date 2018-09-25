@@ -35,9 +35,8 @@ public class AutoWaschAnlageTest {
     }
 
     @Test
-    public void carLeavesBeforeWash() {
+    public void carLeavesBeforeWashSchlangeLengthISCorrect() {
         //given
-
         //when
         Fahrzeug achtesAutoInderSchange = testSchlange.get(7);
         LimitedArrayList<Fahrzeug> schlangeAfterCarsLeft = helperFunctions.autoWaschAnlage.carLeavesBeforeWash(2);
@@ -75,17 +74,34 @@ public class AutoWaschAnlageTest {
     @Test
     void newPkwComesToWash() {
         //given
+        helperFunctions.autoWaschAnlage.newCarComesToWash("Pkw", "HH2345");
         //when
-        helperFunctions.autoWaschAnlage.newCarComesToWash("pkw", "HH2345");
-        String clasNamePkw = helperFunctions.autoWaschAnlage.getFahrzeuge().get(8).getClass().getName().replace("carz.", "");
         int preisPkw = helperFunctions.autoWaschAnlage.getFahrzeuge().get(8).getPreis();
         //then
-        Assertions.assertEquals(helperFunctions.autoWaschAnlage.getFahrzeuge().size(), 9);
-        Assertions.assertEquals("HH2345", helperFunctions.autoWaschAnlage.getFahrzeuge().get(8).getKennzeichen());
-        Assertions.assertEquals("Pkw", clasNamePkw);
         Assertions.assertEquals(5, preisPkw);
     }
 
+    @Test
+    void newPkwComesToWashSchlangeHasRightLength() {
+        //given
+        helperFunctions.autoWaschAnlage.newCarComesToWash("Pkw", "HH2345");
+        //when
+        //then
+        Assertions.assertEquals(helperFunctions.autoWaschAnlage.getFahrzeuge().size(), 9);
+
+    }
+
+    @Test
+    void newLkwComesToWashDescriptionAndKennzeichenCorrect() {
+        //given
+        //when
+        helperFunctions.autoWaschAnlage.newCarComesToWash("Lkw", "HH-2341");
+        String clasNamePkw = helperFunctions.autoWaschAnlage.getFahrzeuge().get(8).getClass().getName().replace("carz.", "");
+        //then
+        Assertions.assertEquals("HH-2341", helperFunctions.autoWaschAnlage.getFahrzeuge().get(8).getKennzeichen());
+        Assertions.assertEquals("Lkw", clasNamePkw);
+
+    }
 
     @Test
     void newUnidentifiedCarComesToWashNotAddedToSchlange() {
@@ -94,23 +110,6 @@ public class AutoWaschAnlageTest {
         Assertions.assertEquals(8, helperFunctions.autoWaschAnlage.getFahrzeuge().size());
     }
 
-    @Test
-    void unidentifiedCarThrowsExceptionInCarFactory() {
-        Assertions.
-                assertThrows(IllegalArgumentException.class,
-                        () -> CarFactory.createCar("unidentifierdCar", "HH2345"));
 
-    }
-    /*@Test
-    void schlangeInfoTest() {
-        Assertions.assertEquals(autoWaschAnlage.schlangeInfo(), "Es sind 8 Autos in der Schlange.");
 
-        //when
-        for (int i = 1; i <= 8; i++) {
-            autoWaschAnlage.carWashed();
-        }
-        //then
-        Assertions.assertEquals(autoWaschAnlage.schlangeInfo(), "Es befinden sich keine Autos in der Schlange.");
-
-    }*/
 }
