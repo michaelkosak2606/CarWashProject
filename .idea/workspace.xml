@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="818ca853-084a-49e3-8dce-64c159959b69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/tests/AutoWaschAnlageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/tests/AutoWaschAnlageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/utils/HelperFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/utils/HelperFunctionsForTestsOnly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carwash/main/AutoWaschAnlage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carwash/main/AutoWaschAnlage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carwash/main/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carwash/main/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/carwash/tests/AutoWaschAnlageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/carwash/tests/AutoWaschAnlageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/carwash/utils/HelperFunctions.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AutoWaschAnlage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AutoWaschAnlage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Menu.java" afterDir="false" />
     </list>
@@ -46,7 +39,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="136" />
-          <entry key="java" value="11093" />
+          <entry key="java" value="11421" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -54,7 +47,7 @@
       <usages-collector id="statistics.spring.boot.mvc.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11093" />
+          <entry key="JAVA" value="11421" />
           <entry key="PLAIN_TEXT" value="136" />
         </counts>
       </usages-collector>
@@ -66,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/AutoWaschAnlage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="224">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3495#3496#0" expanded="true" />
@@ -146,8 +139,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1421">
-              <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
+            <state relative-caret-position="-383">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
@@ -213,8 +206,8 @@
         <option value="$PROJECT_DIR$/Test/tests/CarFactoryTest.java" />
         <option value="$PROJECT_DIR$/Test/utils/HelperFunctionsForTestsOnly.java" />
         <option value="$PROJECT_DIR$/Test/tests/AutoWaschAnlageTest.java" />
-        <option value="$PROJECT_DIR$/src/main/Menu.java" />
         <option value="$PROJECT_DIR$/src/main/AutoWaschAnlage.java" />
+        <option value="$PROJECT_DIR$/src/main/Menu.java" />
       </list>
     </option>
   </component>
@@ -291,7 +284,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537882179062" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537884770966" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -434,7 +427,7 @@
       <workItem from="1537254432954" duration="1618000" />
       <workItem from="1537258003500" duration="3864000" />
       <workItem from="1537267655249" duration="1293000" />
-      <workItem from="1537432600894" duration="57579000" />
+      <workItem from="1537432600894" duration="59668000" />
     </task>
     <servers />
   </component>
@@ -471,7 +464,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79694000" />
+    <option name="totallyTimeSpent" value="81783000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -793,8 +786,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/AutoWaschAnlage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="224">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3495#3496#0" expanded="true" />
@@ -811,8 +804,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1421">
-          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
+        <state relative-caret-position="-383">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>

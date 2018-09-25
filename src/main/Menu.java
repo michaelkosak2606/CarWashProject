@@ -19,7 +19,7 @@ public class Menu {
             if (eingabe.equals("1")) {
                 System.out.println("........................................ ");
                 System.out.println("........................................ ");
-                autoWaschAnlage.schlangeInfo();
+                schlangeInfo();
                 System.out.println("........................................ ");
                 System.out.println("........................................ ");
 
@@ -32,23 +32,15 @@ public class Menu {
                 autoWaschAnlage.newCarComesToWash(description, kennzeichen);
                 int newSize = autoWaschAnlage.getFahrzeuge().size();
                 if (oldSize < newSize) {
-                    System.out.println("........................................ ");
-                    System.out.println("........................................ ");
-                    System.out.println("Auto kommt in die Wäsche.");
-                    System.out.println("........................................ ");
-                    System.out.println("........................................ ");
+                    printExpressions(1);
                 }
             } else if (eingabe.equals("0")) {
-                System.out.println("........................................ ");
-                System.out.println("........................................ ");
-                System.out.println("Programm wurde beendet.");
-                System.out.println("........................................ ");
-                System.out.println("........................................ ");
+                printExpressions(0);
                 break;
             } else if (autoWaschAnlage.getFahrzeuge().size() > 0 && eingabe.equals("4")) {
                 autoWaschAnlage.carWashed();
-                System.out.println("Auto wurde gewaschen und verlässt die Autowaschanlage.");
-                autoWaschAnlage.schlangeInfo();
+                printExpressionsOption(4);
+                schlangeInfo();
             } else if (autoWaschAnlage.getFahrzeuge().size() > 1 && eingabe.equals("3")) {
                 fahrzeugLeavesBeforeWash();
             } else {
@@ -67,25 +59,64 @@ public class Menu {
         }
     }
 
-    public void printExpressions() {
+    public String printExpressionsOption(int option) {
+
+        if (option == 0) {
+            return "Programm wurde beendet.";
+        }
+        if (option == 1) {
+            return "Auto kommt in die Wäsche.";
+        }
+        if (option == 2) {
+            return "Auto " + 1 + ": Kennzeichen " + autoWaschAnlage.getFahrzeuge().get(0).getKennzeichen() + ", Fahrzeugart: " + autoWaschAnlage.getFahrzeuge().get(0).getClass().getName().replace("carz.", "") + ", Wird gewaschen.";
+        }
+
+        if (option == 4) {
+            return "Auto wurde gewaschen und verlässt die Autowaschanlage.";
+        }
+        return "";
+    }
+
+    public void printExpressions(int option) {
+        String text = printExpressionsOption(option);
+
+        System.out.println("........................................ ");
+        System.out.println("........................................ ");
+        System.out.println(text);
+        System.out.println("........................................ ");
+        System.out.println("........................................ ");
 
     }
+
 
     public void fahrzeugLeavesBeforeWash() {
         int oldSize = autoWaschAnlage.getFahrzeuge().size();
-
-        autoWaschAnlage.schlangeInfo();
+        schlangeInfo();
         System.out.println("Gebe die Nummer des Fahrzeuges ein, das die Schlange verlassen soll: ");
+
         int eingabeNummerDesFahrzeugs = scanner.nextInt();
         int umrechnungInIndex = eingabeNummerDesFahrzeugs - 1;
-
         autoWaschAnlage.carLeavesBeforeWash(umrechnungInIndex);
-        int newSize = autoWaschAnlage.getFahrzeuge().size();
 
+        int newSize = autoWaschAnlage.getFahrzeuge().size();
         if (oldSize > newSize) {
             System.out.println("Das Fahrzeug Nummer " + eingabeNummerDesFahrzeugs + " hat die Schlange verlassen.");
         }
-            autoWaschAnlage.schlangeInfo();
+        schlangeInfo();
     }
 
+    public void schlangeInfo() {
+        if (autoWaschAnlage.getFahrzeuge().size() < 1) {
+            System.out.println("Es befinden sich keine Fahrzeuge in der Schlange.");
+        } else {
+            System.out.println(printExpressionsOption(2));
+            for (int i = 1; i < autoWaschAnlage.getFahrzeuge().size(); i++) {
+                int numberOfFahrzeug = i + 1;
+                System.out.println("Auto " + numberOfFahrzeug + ": Kennzeichen " + autoWaschAnlage.getFahrzeuge().get(i).getKennzeichen() + ", Fahrzeugart: " + autoWaschAnlage.getFahrzeuge().get(i).getClass().getName().replace("carz.", ""));
+
+            }
+            System.out.println();
+
+        }
+    }
 }

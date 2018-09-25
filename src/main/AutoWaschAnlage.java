@@ -57,25 +57,7 @@ public class AutoWaschAnlage {
         return fahrzeuge;
     }
 
-    public void schlangeInfo() {
-        if (fahrzeuge.size() < 1) {
-            System.out.println("Es befinden sich keine Autos in der Schlange.");
-        } else if (fahrzeuge.size() == 1) {
-            System.out.println("Es ist 1 Autos in der Schlange:");
-            System.out.println("Auto " + 1 + ": Kennzeichen " + fahrzeuge.get(0).getKennzeichen() + ", Fahrzeugart: " + fahrzeuge.get(0).getClass().getName().replace("carz.", "") + ", Wird gewaschen.");
-        } else {
-            System.out.println("Es sind " + fahrzeuge.size() + " Autos in der Schlange:");
-            System.out.println("Auto " + 1 + ": Kennzeichen " + fahrzeuge.get(0).getKennzeichen() + ", Fahrzeugart: " + fahrzeuge.get(0).getClass().getName().replace("carz.", "") + ", Wird gewaschen.");
 
-            for (int i = 1; i < fahrzeuge.size(); i++) {
-                int a = i + 1;
-                System.out.println("Auto " + a + ": Kennzeichen " + fahrzeuge.get(i).getKennzeichen() + ", Fahrzeugart: " + fahrzeuge.get(i).getClass().getName().replace("carz.", ""));
-
-            }
-            System.out.println();
-
-        }
-    }
 
 
     public int getGuthaben() {
