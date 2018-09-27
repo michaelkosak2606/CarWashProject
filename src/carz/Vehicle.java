@@ -1,14 +1,14 @@
 package carz;
 
-public class Fahrzeug {
+public class Vehicle {
     protected String kennzeichen;
     protected int preis = 1;
 
-    public Fahrzeug(String kennzeichen) {
+    public Vehicle(String kennzeichen) {
         this.kennzeichen = kennzeichen;
     }
 
-    public Fahrzeug() {
+    public Vehicle() {
     }
 
 

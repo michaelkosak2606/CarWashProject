@@ -1,6 +1,6 @@
 package carz;
 
-public class Pkw extends Fahrzeug {
+public class Pkw extends Vehicle {
 
     public Pkw(){}
 

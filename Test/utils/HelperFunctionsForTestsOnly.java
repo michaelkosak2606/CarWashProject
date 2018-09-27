@@ -1,22 +1,22 @@
 package utils;
 import carz.*;
 import helpers.*;
-import main.AutoWaschAnlage;
+import main.CarWash;
 
 
 public class HelperFunctionsForTestsOnly {
-    private LimitedArrayList<Fahrzeug> fahrzeugs = new LimitedArrayList<>();
+    private LimitedArrayList<Vehicle> vehicles = new LimitedArrayList<>();
     private Mathematics mathematics = new Mathematics();
-    public AutoWaschAnlage autoWaschAnlage =new AutoWaschAnlage();
+    public CarWash carWash =new CarWash();
 
 
-    public LimitedArrayList<Fahrzeug> createLimitedArrayListWithCars(int amountCars) {
+    public LimitedArrayList<Vehicle> createLimitedArrayListWithCars(int amountCars) {
         for (int i = 0; i < amountCars; i++) {
             String kennzeichenBuchstaben = mathematics.twoRandomLetters();
             String kennzeichenZahlen = mathematics.randomNumberAsString();
-            Fahrzeug fahrzeug = new Fahrzeug(kennzeichenBuchstaben + "-" + kennzeichenZahlen);
-            fahrzeugs.add(fahrzeug);
+            Vehicle vehicle = new Vehicle(kennzeichenBuchstaben + "-" + kennzeichenZahlen);
+            vehicles.add(vehicle);
         }
-        autoWaschAnlage.setFahrzeuge(fahrzeugs);
-        return autoWaschAnlage.getFahrzeuge();
+        carWash.setVehicles(vehicles);
+        return carWash.getVehicles();
     }}

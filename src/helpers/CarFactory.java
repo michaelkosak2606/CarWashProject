@@ -1,13 +1,13 @@
 package helpers;
 
-import carz.Fahrzeug;
+import carz.Vehicle;
 import carz.Lkw;
 import carz.Motorrad;
 import carz.Pkw;
 
 public class CarFactory {
 
-    public static Fahrzeug createCar(String art, String kennzeichen) {
+    public static Vehicle createCar(String art, String kennzeichen) {
         if (art.equals("Pkw")) {
             return new Pkw(kennzeichen);
         }
