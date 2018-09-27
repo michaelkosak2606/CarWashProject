@@ -20,7 +20,7 @@ public class Menu {
             if (eingabe.equals("1")) {
                 System.out.println("........................................ ");
                 System.out.println("........................................ ");
-                showListVehicle();
+                System.out.println(showListVehicle());
                 System.out.println("........................................ ");
                 System.out.println("........................................ ");
 
@@ -41,7 +41,7 @@ public class Menu {
             } else if (carWash.getVehicles().size() > 0 && eingabe.equals("4")) {
                 carWash.carWashed();
                 expressionOptions(4);
-                showListVehicle();
+                System.out.println(showListVehicle());
             } else if (carWash.getVehicles().size() > 1 && eingabe.equals("3")) {
                 vehicleLeavesBeforeWash();
             } else {
@@ -69,7 +69,9 @@ public class Menu {
             return "Auto kommt in die Wäsche.";
         }
         if (option == 2) {
-            return "Auto " + 1 + ": Kennzeichen " + carWash.getVehicles().get(0).getKennzeichen() + ", Fahrzeugart: " + carWash.getVehicles().get(0).getClass().getName().replace("carz.", "") + ", Wird gewaschen.";
+            return "Auto " + 1 + ": Kennzeichen " + carWash.getVehicles().get(0).getKennzeichen() +
+                    ", Fahrzeugart: " + carWash.getVehicles().get(0).getClass().getName().replace("carz.", "")
+                    + ", Wird gewaschen. \n";
         }
 
         if (option == 3) {
@@ -87,7 +89,7 @@ public class Menu {
         if (option == 7) {
             return "Geben sie Art des Fahrzeugs ein: Lkw, Pkw oder Motorrad.";
         }
-        if(option == 8){
+        if (option == 8) {
             return "Ungültige Eingabe.";
         }
         return "";
@@ -107,35 +109,41 @@ public class Menu {
 
     public void vehicleLeavesBeforeWash() {
         int oldSize = carWash.getVehicles().size();
-        showListVehicle();
+        System.out.println(showListVehicle());
         System.out.println(expressionOptions(5));
 
-        int eingabeNummerDesFahrzeugs;
+        int inputNumberOfVehicle;
         try {
-            eingabeNummerDesFahrzeugs = scanner.nextInt();
-            int umrechnungInIndex = eingabeNummerDesFahrzeugs - 1;
+            inputNumberOfVehicle = scanner.nextInt();
+            int umrechnungInIndex = inputNumberOfVehicle - 1;
             carWash.carLeavesBeforeWash(umrechnungInIndex);
             int newSize = carWash.getVehicles().size();
             if (oldSize > newSize) {
-                System.out.println("Das Vehicle Nummer " + eingabeNummerDesFahrzeugs + " hat die Schlange verlassen.");
+                System.out.println("Das Fahrzeug Nummer " + inputNumberOfVehicle + " hat die Schlange verlassen.");
             }
         } catch (InputMismatchException ex) {
-               System.out.println(expressionOptions(8));
-               scanner.next();
+            System.out.println(expressionOptions(8));
+            scanner.next();
         }
     }
 
-    public void showListVehicle() {
+    public String showListVehicle() {
         if (carWash.getVehicles().size() < 1) {
-            System.out.println(expressionOptions(3));
-        } else {
-            System.out.println(expressionOptions(2));
+            return expressionOptions(3);
+        }
+        else if(carWash.getVehicles().size() == 1){
+            return expressionOptions(2);
+        }
+        else {
+            expressionOptions(2);
             for (int i = 1; i < carWash.getVehicles().size(); i++) {
                 int numberOfFahrzeug = i + 1;
-                System.out.println("Auto " + numberOfFahrzeug + ": Kennzeichen " +
+                String text = "Auto " + numberOfFahrzeug + ": Kennzeichen " +
                         carWash.getVehicles().get(i).getKennzeichen() + ", Fahrzeugart: " +
-                        carWash.getVehicles().get(i).getClass().getName().replace("carz.", ""));
+                        carWash.getVehicles().get(i).getClass().getName().replace("carz.", "");
+                return expressionOptions(2) + text;
             }
         }
+        return "There is a problem with carWash.getVehicles";
     }
 }
