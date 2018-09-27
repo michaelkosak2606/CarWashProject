@@ -18,30 +18,17 @@ public class Menu {
             String eingabe = scanner.next();
 
             if (eingabe.equals("1")) {
-                System.out.println("........................................ ");
-                System.out.println("........................................ ");
-                System.out.println(showListVehicle());
-                System.out.println("........................................ ");
-                System.out.println("........................................ ");
+                printExpressions(9);
 
             } else if (eingabe.equals("2")) {
-                int oldSize = carWash.getVehicles().size();
-                System.out.println(expressionOptions(6));
-                String kennzeichen = scanner.next();
-                System.out.println(expressionOptions(7));
-                String description = scanner.next();
-                carWash.newCarComesToWash(description, kennzeichen);
-                int newSize = carWash.getVehicles().size();
-                if (oldSize < newSize) {
-                    printExpressions(1);
-                }
+                newVehicleSignsIn();
             } else if (eingabe.equals("0")) {
                 printExpressions(0);
                 break;
             } else if (carWash.getVehicles().size() > 0 && eingabe.equals("4")) {
                 carWash.carWashed();
                 expressionOptions(4);
-                System.out.println(showListVehicle());
+                System.out.println(showListOfVehicles());
             } else if (carWash.getVehicles().size() > 1 && eingabe.equals("3")) {
                 vehicleLeavesBeforeWash();
             } else {
@@ -52,11 +39,11 @@ public class Menu {
 
     public void eingabeOptionen() {
         if (carWash.getVehicles().size() < 1) {
-            System.out.println("0. Programm beenden 1. Liste der Fahrzeuge  2. Neues Vehicle anmelden.");
+            System.out.println("0. Programm beenden 1. Liste der Fahrzeuge  2. Neues Fahrzeug anmelden.");
         } else if (carWash.getVehicles().size() == 1) {
-            System.out.println("0. Programm beenden. 1. Liste der Fahrzeuge  2. Neues Vehicle anmelden.  4.Vehicle wurde gewaschen.");
+            System.out.println("0. Programm beenden. 1. Liste der Fahrzeuge  2. Neues Fahrzeug anmelden.  4.Fahrzeug wurde gewaschen.");
         } else if (carWash.getVehicles().size() > 1) {
-            System.out.println("0. Programm beenden. 1. Liste der Fahrzeuge  2. Neues Vehicle anmelden. 3.Vehicle verlässt vorzeitig die Schlange  4.Vehicle wurde gewaschen.");
+            System.out.println("0. Programm beenden. 1. Liste der Fahrzeuge  2. Neues Fahrzeug anmelden. 3.Fahrzeug verlässt vorzeitig die Schlange  4.Fahrzeug wurde gewaschen.");
         }
     }
 
@@ -92,6 +79,9 @@ public class Menu {
         if (option == 8) {
             return "Ungültige Eingabe.";
         }
+        if (option == 9) {
+            return showListOfVehicles();
+        }
         return "";
     }
 
@@ -106,10 +96,22 @@ public class Menu {
 
     }
 
+    public void newVehicleSignsIn() {
+        int oldSize = carWash.getVehicles().size();
+        System.out.println(expressionOptions(6));
+        String kennzeichen = scanner.next();
+        System.out.println(expressionOptions(7));
+        String description = scanner.next();
+        carWash.newCarComesToWash(description, kennzeichen);
+        int newSize = carWash.getVehicles().size();
+        if (oldSize < newSize) {
+            printExpressions(1);
+        }
+    }
 
     public void vehicleLeavesBeforeWash() {
         int oldSize = carWash.getVehicles().size();
-        System.out.println(showListVehicle());
+        System.out.println(showListOfVehicles());
         System.out.println(expressionOptions(5));
 
         int inputNumberOfVehicle;
@@ -127,23 +129,21 @@ public class Menu {
         }
     }
 
-    public String showListVehicle() {
+    public String showListOfVehicles() {
+        String listOfVehiclesFromByTwoOrMore = "";
         if (carWash.getVehicles().size() < 1) {
             return expressionOptions(3);
-        }
-        else if(carWash.getVehicles().size() == 1){
+        } else if (carWash.getVehicles().size() == 1) {
             return expressionOptions(2);
-        }
-        else {
-            expressionOptions(2);
+        } else {
             for (int i = 1; i < carWash.getVehicles().size(); i++) {
                 int numberOfFahrzeug = i + 1;
                 String text = "Auto " + numberOfFahrzeug + ": Kennzeichen " +
                         carWash.getVehicles().get(i).getKennzeichen() + ", Fahrzeugart: " +
-                        carWash.getVehicles().get(i).getClass().getName().replace("carz.", "");
-                return expressionOptions(2) + text;
+                        carWash.getVehicles().get(i).getClass().getName().replace("carz.", "") + "\n";
+                listOfVehiclesFromByTwoOrMore = listOfVehiclesFromByTwoOrMore + text;
             }
+                return expressionOptions(2) + listOfVehiclesFromByTwoOrMore;
         }
-        return "There is a problem with carWash.getVehicles";
     }
 }
